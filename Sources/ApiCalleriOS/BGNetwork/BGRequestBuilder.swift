@@ -41,7 +41,7 @@ public final class BGRequestBuilder:BGRequest{
     }
     
     public func build() throws -> URLRequest {
-        var url = baseURL.appendingPathExtension(endPoint)
+        let url = baseURL.appendingPathExtension(endPoint)
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
         urlRequest.allHTTPHeaderFields = header
